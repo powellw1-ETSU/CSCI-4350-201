@@ -1,0 +1,81 @@
+﻿@model Bikeshop_Project.Models.City
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>City</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CityId" class="control-label"></label>
+                <input asp-for="CityId" class="form-control" />
+                <span asp-validation-for="CityId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ZIPCODE" class="control-label"></label>
+                <input asp-for="ZIPCODE" class="form-control" />
+                <span asp-validation-for="ZIPCODE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CITY" class="control-label"></label>
+                <input asp-for="CITY" class="form-control" />
+                <span asp-validation-for="CITY" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="STATE" class="control-label"></label>
+                <input asp-for="STATE" class="form-control" />
+                <span asp-validation-for="STATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AREACODE" class="control-label"></label>
+                <input asp-for="AREACODE" class="form-control" />
+                <span asp-validation-for="AREACODE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="POPULATION1990" class="control-label"></label>
+                <input asp-for="POPULATION1990" class="form-control" />
+                <span asp-validation-for="POPULATION1990" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="POPULATION1980" class="control-label"></label>
+                <input asp-for="POPULATION1980" class="form-control" />
+                <span asp-validation-for="POPULATION1980" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="COUNTRY" class="control-label"></label>
+                <input asp-for="COUNTRY" class="form-control" />
+                <span asp-validation-for="COUNTRY" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LATITUDE" class="control-label"></label>
+                <input asp-for="LATITUDE" class="form-control" />
+                <span asp-validation-for="LATITUDE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LONGITUDE" class="control-label"></label>
+                <input asp-for="LONGITUDE" class="form-control" />
+                <span asp-validation-for="LONGITUDE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="POPULATIONCDF" class="control-label"></label>
+                <input asp-for="POPULATIONCDF" class="form-control" />
+                <span asp-validation-for="POPULATIONCDF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

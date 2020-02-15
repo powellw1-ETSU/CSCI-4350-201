@@ -18,6 +18,11 @@ namespace Bikeshop_Project.Controllers
             return View();
         }
 
+        public IActionResult Create()
+        {
+            return View();
+        }
+
         // GET: api/City/5
         [HttpGet("{id}", Name = "Get")]
         public string Get(int id)
