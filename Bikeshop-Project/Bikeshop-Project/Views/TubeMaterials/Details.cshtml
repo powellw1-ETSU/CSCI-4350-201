@@ -1,0 +1,73 @@
+﻿@model Bikeshop_Project.Models.TubeMaterial
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>TubeMaterial</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MATERIAL)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MATERIAL)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DESCRIPTION)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DESCRIPTION)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DIAMETER)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DIAMETER)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.THICKNESS)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.THICKNESS)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ROUNDNESS)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ROUNDNESS)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WEIGHT)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WEIGHT)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.STIFFNESS)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.STIFFNESS)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LISTPRICE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LISTPRICE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CONSTRUCTION)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CONSTRUCTION)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.TUBEID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

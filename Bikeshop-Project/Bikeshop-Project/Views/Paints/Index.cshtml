@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Bikeshop_Project.Models.Paint>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.COLORNAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.COLORSTYLE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.COLORLIST)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DATEINTRODUCED)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DATEDISCONTINUED)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.COLORNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COLORSTYLE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COLORLIST)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DATEINTRODUCED)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DATEDISCONTINUED)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PAINTID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PAINTID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PAINTID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

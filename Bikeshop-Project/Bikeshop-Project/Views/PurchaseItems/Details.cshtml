@@ -1,0 +1,49 @@
+﻿@model Bikeshop_Project.Models.PurchaseItem
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>PurchaseItem</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PURCHASEID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PURCHASEID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.COMPONENTID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.COMPONENTID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PRICEPAID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PRICEPAID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.QUANTITY)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.QUANTITY)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.QUANTITYRECEIVED)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.QUANTITYRECEIVED)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,72 @@
+﻿@model Bikeshop_Project.Models.TubeMaterial
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>TubeMaterial</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="TUBEID" />
+            <div class="form-group">
+                <label asp-for="MATERIAL" class="control-label"></label>
+                <input asp-for="MATERIAL" class="form-control" />
+                <span asp-validation-for="MATERIAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DESCRIPTION" class="control-label"></label>
+                <input asp-for="DESCRIPTION" class="form-control" />
+                <span asp-validation-for="DESCRIPTION" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DIAMETER" class="control-label"></label>
+                <input asp-for="DIAMETER" class="form-control" />
+                <span asp-validation-for="DIAMETER" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="THICKNESS" class="control-label"></label>
+                <input asp-for="THICKNESS" class="form-control" />
+                <span asp-validation-for="THICKNESS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ROUNDNESS" class="control-label"></label>
+                <input asp-for="ROUNDNESS" class="form-control" />
+                <span asp-validation-for="ROUNDNESS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WEIGHT" class="control-label"></label>
+                <input asp-for="WEIGHT" class="form-control" />
+                <span asp-validation-for="WEIGHT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="STIFFNESS" class="control-label"></label>
+                <input asp-for="STIFFNESS" class="form-control" />
+                <span asp-validation-for="STIFFNESS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LISTPRICE" class="control-label"></label>
+                <input asp-for="LISTPRICE" class="form-control" />
+                <span asp-validation-for="LISTPRICE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CONSTRUCTION" class="control-label"></label>
+                <input asp-for="CONSTRUCTION" class="form-control" />
+                <span asp-validation-for="CONSTRUCTION" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

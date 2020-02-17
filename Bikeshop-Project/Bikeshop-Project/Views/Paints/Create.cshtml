@@ -1,0 +1,56 @@
+﻿@model Bikeshop_Project.Models.Paint
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Paint</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PAINTID" class="control-label"></label>
+                <input asp-for="PAINTID" class="form-control" />
+                <span asp-validation-for="PAINTID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="COLORNAME" class="control-label"></label>
+                <input asp-for="COLORNAME" class="form-control" />
+                <span asp-validation-for="COLORNAME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="COLORSTYLE" class="control-label"></label>
+                <input asp-for="COLORSTYLE" class="form-control" />
+                <span asp-validation-for="COLORSTYLE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="COLORLIST" class="control-label"></label>
+                <input asp-for="COLORLIST" class="form-control" />
+                <span asp-validation-for="COLORLIST" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DATEINTRODUCED" class="control-label"></label>
+                <input asp-for="DATEINTRODUCED" class="form-control" />
+                <span asp-validation-for="DATEINTRODUCED" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DATEDISCONTINUED" class="control-label"></label>
+                <input asp-for="DATEDISCONTINUED" class="form-control" />
+                <span asp-validation-for="DATEDISCONTINUED" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

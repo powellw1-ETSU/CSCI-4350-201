@@ -1,0 +1,49 @@
+﻿@model Bikeshop_Project.Models.Paint
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Paint</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.COLORNAME)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.COLORNAME)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.COLORSTYLE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.COLORSTYLE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.COLORLIST)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.COLORLIST)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DATEINTRODUCED)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DATEINTRODUCED)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DATEDISCONTINUED)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DATEDISCONTINUED)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PAINTID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
