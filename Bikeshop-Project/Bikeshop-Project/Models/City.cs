@@ -14,9 +14,9 @@ namespace Bikeshop_Project.Models
 
         public string AREACODE { get; set; }
 
-        public Decimal POPULATION1990 { get; set; }
+        public decimal POPULATION1990 { get; set; }
 
-        public Decimal POPULATION1980 { get; set; }
+        public decimal POPULATION1980 { get; set; }
 
         public string COUNTRY { get; set; }
 

@@ -15,5 +15,9 @@ namespace Bikeshop_Project.Data
         }
 
         public DbSet<Bikeshop_Project.Models.City> City { get; set; }
+
+        public DbSet<Bikeshop_Project.Models.CommonSizes> CommonSizes { get; set; }
+
+        public DbSet<Bikeshop_Project.Models.BikeTubes> BikeTubes { get; set; }
     }
 }
