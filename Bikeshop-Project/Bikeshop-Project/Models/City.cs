@@ -20,11 +20,11 @@ namespace Bikeshop_Project.Models
 
         public string COUNTRY { get; set; }
 
-        public float LATITUDE { get; set; }
+        public double LATITUDE { get; set; }
 
-        public float LONGITUDE { get; set; }
+        public double LONGITUDE { get; set; }
 
-        public float POPULATIONCDF { get; set; }
+        public double POPULATIONCDF { get; set; }
 
         public bool ShowCityId => !string.IsNullOrEmpty(CityId);
     }

@@ -45,5 +45,11 @@ namespace Bikeshop_Project.Data
         public DbSet<Bikeshop_Project.Models.Paint> Paint { get; set; }
 
         public DbSet<Bikeshop_Project.Models.ModelType> ModelType { get; set; }
+
+        public DbSet<Bikeshop_Project.Models.BikeParts> BikeParts { get; set; }
+
+        public DbSet<Bikeshop_Project.Models.BicycleTubeUsage> BicycleTubeUsage { get; set; }
+
+        public DbSet<Bikeshop_Project.Models.Bicycle> Bicycle { get; set; }
     }
 }

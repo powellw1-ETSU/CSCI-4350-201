@@ -1,0 +1,181 @@
+﻿@model Bikeshop_Project.Models.Bicycle
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Bicycle</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CUSTOMERID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CUSTOMERID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MODELTYPE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MODELTYPE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PAINTID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PAINTID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FRAMESIZE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FRAMESIZE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ORDERDATE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ORDERDATE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.STARTDATE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.STARTDATE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SHIPDATE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SHIPDATE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SHIPEMPLOYEE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SHIPEMPLOYEE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FRAMEASSEMBLER)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FRAMEASSEMBLER)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PAINTER)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PAINTER)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CONSTRUCTION)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CONSTRUCTION)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WATERBOTTLEBRAZEONS)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WATERBOTTLEBRAZEONS)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CUSTOMNAME)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CUSTOMNAME)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LETTERSTYLEID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LETTERSTYLEID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.STOREID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.STOREID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EMPLOYEEID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EMPLOYEEID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TOPTUBE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TOPTUBE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CHAINSTAY)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CHAINSTAY)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HEADTUBEANGLE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HEADTUBEANGLE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SEATTUBEANGLE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SEATTUBEANGLE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LISTPRICE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LISTPRICE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SALEPRICE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SALEPRICE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SALESTAX)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SALESTAX)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SALESTATE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SALESTATE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SHIPPRICE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SHIPPRICE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FRAMEPRICE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FRAMEPRICE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.COMPONENTLIST)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.COMPONENTLIST)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SERIALNUMBER">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
