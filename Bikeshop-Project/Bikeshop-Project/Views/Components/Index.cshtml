@@ -1,0 +1,114 @@
+﻿@model IEnumerable<Bikeshop_Project.Models.Component>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MANUFACTURERID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PRODUCTNUMBER)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ROAD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CATEGORY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LENGTH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HEIGHT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WIDTH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WEIGHT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YEAR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ENDYEAR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DESCRIPTION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LISTPRICE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ESTIMATEDCOST)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QUANTITYONHAND)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MANUFACTURERID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRODUCTNUMBER)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ROAD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CATEGORY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LENGTH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HEIGHT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WIDTH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WEIGHT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YEAR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ENDYEAR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DESCRIPTION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LISTPRICE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ESTIMATEDCOST)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QUANTITYONHAND)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.COMPONENTID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.COMPONENTID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.COMPONENTID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

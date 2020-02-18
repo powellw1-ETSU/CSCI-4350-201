@@ -51,5 +51,19 @@ namespace Bikeshop_Project.Data
         public DbSet<Bikeshop_Project.Models.BicycleTubeUsage> BicycleTubeUsage { get; set; }
 
         public DbSet<Bikeshop_Project.Models.Bicycle> Bicycle { get; set; }
+
+        public DbSet<Bikeshop_Project.Models.Component> Component { get; set; }
+
+        public DbSet<Bikeshop_Project.Models.ComponentName> ComponentName { get; set; }
+
+        public DbSet<Bikeshop_Project.Models.Customer> Customer { get; set; }
+
+        public DbSet<Bikeshop_Project.Models.CustomerTransaction> CustomerTransaction { get; set; }
+
+        public DbSet<Bikeshop_Project.Models.Employee> Employee { get; set; }
+
+        public DbSet<Bikeshop_Project.Models.GroupComponents> GroupComponents { get; set; }
+
+        public DbSet<Bikeshop_Project.Models.GroupO> GroupO { get; set; }
     }
 }

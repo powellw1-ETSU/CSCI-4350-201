@@ -1,0 +1,61 @@
+﻿@model Bikeshop_Project.Models.CustomerTransaction
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>CustomerTransaction</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CUSTOMERID" class="control-label"></label>
+                <input asp-for="CUSTOMERID" class="form-control" />
+                <span asp-validation-for="CUSTOMERID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TRANSACTIONDATE" class="control-label"></label>
+                <input asp-for="TRANSACTIONDATE" class="form-control" />
+                <span asp-validation-for="TRANSACTIONDATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EMPLOYEEID" class="control-label"></label>
+                <input asp-for="EMPLOYEEID" class="form-control" />
+                <span asp-validation-for="EMPLOYEEID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AMOUNT" class="control-label"></label>
+                <input asp-for="AMOUNT" class="form-control" />
+                <span asp-validation-for="AMOUNT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DESCRIPTION" class="control-label"></label>
+                <input asp-for="DESCRIPTION" class="form-control" />
+                <span asp-validation-for="DESCRIPTION" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REFERENCE" class="control-label"></label>
+                <input asp-for="REFERENCE" class="form-control" />
+                <span asp-validation-for="REFERENCE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="id" class="control-label"></label>
+                <input asp-for="id" class="form-control" />
+                <span asp-validation-for="id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
