@@ -65,5 +65,13 @@ namespace Bikeshop_Project.Data
         public DbSet<Bikeshop_Project.Models.GroupComponents> GroupComponents { get; set; }
 
         public DbSet<Bikeshop_Project.Models.GroupO> GroupO { get; set; }
+
+        public DbSet<Bikeshop_Project.Models.LetterStyle> LetterStyle { get; set; }
+
+        public DbSet<Bikeshop_Project.Models.Manufacturer> Manufacturer { get; set; }
+
+        public DbSet<Bikeshop_Project.Models.ManufacturerTransaction> ManufacturerTransaction { get; set; }
+
+        public DbSet<Bikeshop_Project.Models.ModelSize> ModelSize { get; set; }
     }
 }

@@ -1,0 +1,71 @@
+﻿@model Bikeshop_Project.Models.ModelSize
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>ModelSize</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="id" class="control-label"></label>
+                <input asp-for="id" class="form-control" />
+                <span asp-validation-for="id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MODELTYPE" class="control-label"></label>
+                <input asp-for="MODELTYPE" class="form-control" />
+                <span asp-validation-for="MODELTYPE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MSIZE" class="control-label"></label>
+                <input asp-for="MSIZE" class="form-control" />
+                <span asp-validation-for="MSIZE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TOPTUBE" class="control-label"></label>
+                <input asp-for="TOPTUBE" class="form-control" />
+                <span asp-validation-for="TOPTUBE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CHAINSTAY" class="control-label"></label>
+                <input asp-for="CHAINSTAY" class="form-control" />
+                <span asp-validation-for="CHAINSTAY" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TOTALLENGTH" class="control-label"></label>
+                <input asp-for="TOTALLENGTH" class="form-control" />
+                <span asp-validation-for="TOTALLENGTH" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GROUNDCLEARANCE" class="control-label"></label>
+                <input asp-for="GROUNDCLEARANCE" class="form-control" />
+                <span asp-validation-for="GROUNDCLEARANCE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HEADTUBEANGLE" class="control-label"></label>
+                <input asp-for="HEADTUBEANGLE" class="form-control" />
+                <span asp-validation-for="HEADTUBEANGLE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SEATTUBEANGEL" class="control-label"></label>
+                <input asp-for="SEATTUBEANGEL" class="form-control" />
+                <span asp-validation-for="SEATTUBEANGEL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
