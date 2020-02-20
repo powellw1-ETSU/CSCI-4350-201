@@ -1,0 +1,51 @@
+﻿@model Bikeshop_Project.Models.RevisionHistory
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>RevisionHistory</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ID" class="control-label"></label>
+                <input asp-for="ID" class="form-control" />
+                <span asp-validation-for="ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VERSION" class="control-label"></label>
+                <input asp-for="VERSION" class="form-control" />
+                <span asp-validation-for="VERSION" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CHANGEDATE" class="control-label"></label>
+                <input asp-for="CHANGEDATE" class="form-control" />
+                <span asp-validation-for="CHANGEDATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NAME" class="control-label"></label>
+                <input asp-for="NAME" class="form-control" />
+                <span asp-validation-for="NAME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REVISIONCOMMENTS" class="control-label"></label>
+                <input asp-for="REVISIONCOMMENTS" class="form-control" />
+                <span asp-validation-for="REVISIONCOMMENTS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

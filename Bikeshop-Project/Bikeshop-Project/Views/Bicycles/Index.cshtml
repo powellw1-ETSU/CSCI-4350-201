@@ -1,0 +1,192 @@
+﻿@model IEnumerable<Bikeshop_Project.Models.Bicycle>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CUSTOMERID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MODELTYPE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PAINTID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FRAMESIZE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ORDERDATE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.STARTDATE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SHIPDATE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SHIPEMPLOYEE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FRAMEASSEMBLER)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PAINTER)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CONSTRUCTION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WATERBOTTLEBRAZEONS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CUSTOMNAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LETTERSTYLEID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.STOREID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EMPLOYEEID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TOPTUBE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CHAINSTAY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HEADTUBEANGLE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SEATTUBEANGLE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LISTPRICE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SALEPRICE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SALESTAX)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SALESTATE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SHIPPRICE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FRAMEPRICE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.COMPONENTLIST)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CUSTOMERID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MODELTYPE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PAINTID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FRAMESIZE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ORDERDATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.STARTDATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SHIPDATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SHIPEMPLOYEE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FRAMEASSEMBLER)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PAINTER)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CONSTRUCTION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WATERBOTTLEBRAZEONS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CUSTOMNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LETTERSTYLEID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.STOREID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMPLOYEEID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TOPTUBE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CHAINSTAY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HEADTUBEANGLE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SEATTUBEANGLE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LISTPRICE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SALEPRICE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SALESTAX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SALESTATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SHIPPRICE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FRAMEPRICE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COMPONENTLIST)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SERIALNUMBER">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SERIALNUMBER">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SERIALNUMBER">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

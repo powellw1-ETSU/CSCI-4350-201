@@ -1,0 +1,67 @@
+﻿@model Bikeshop_Project.Models.ModelSize
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ModelSize</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MODELTYPE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MODELTYPE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MSIZE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MSIZE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TOPTUBE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TOPTUBE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CHAINSTAY)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CHAINSTAY)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TOTALLENGTH)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TOTALLENGTH)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GROUNDCLEARANCE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GROUNDCLEARANCE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HEADTUBEANGLE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HEADTUBEANGLE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SEATTUBEANGEL)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SEATTUBEANGEL)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

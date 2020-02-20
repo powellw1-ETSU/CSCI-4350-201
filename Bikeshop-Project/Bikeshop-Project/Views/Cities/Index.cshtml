@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Bikeshop_Project.Models.City>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ZIPCODE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CITY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.STATE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AREACODE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.POPULATION1990)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.POPULATION1980)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.COUNTRY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LATITUDE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LONGITUDE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.POPULATIONCDF)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZIPCODE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CITY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.STATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AREACODE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.POPULATION1990)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.POPULATION1980)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COUNTRY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LATITUDE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LONGITUDE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.POPULATIONCDF)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CityId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CityId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CityId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,56 @@
+﻿@model Bikeshop_Project.Models.GroupO
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>GroupO</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="COMPONENTGROUPID" class="control-label"></label>
+                <input asp-for="COMPONENTGROUPID" class="form-control" />
+                <span asp-validation-for="COMPONENTGROUPID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GROUPNAME" class="control-label"></label>
+                <input asp-for="GROUPNAME" class="form-control" />
+                <span asp-validation-for="GROUPNAME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BIKETYPE" class="control-label"></label>
+                <input asp-for="BIKETYPE" class="form-control" />
+                <span asp-validation-for="BIKETYPE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YEAR" class="control-label"></label>
+                <input asp-for="YEAR" class="form-control" />
+                <span asp-validation-for="YEAR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ENDYEAR" class="control-label"></label>
+                <input asp-for="ENDYEAR" class="form-control" />
+                <span asp-validation-for="ENDYEAR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WEIGHT" class="control-label"></label>
+                <input asp-for="WEIGHT" class="form-control" />
+                <span asp-validation-for="WEIGHT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

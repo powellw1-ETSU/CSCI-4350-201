@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Bikeshop_Project.Models.PurchaseOrder>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EMPLOYEEID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MANUFACTURERID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TOTALLIST)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SHIPPINGCOST)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DISCOUNT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ORDERDATE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RECEIVEDATE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AMOUNTDUE)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMPLOYEEID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MANUFACTURERID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TOTALLIST)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SHIPPINGCOST)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DISCOUNT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ORDERDATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RECEIVEDATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AMOUNTDUE)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PURCHASEID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PURCHASEID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PURCHASEID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

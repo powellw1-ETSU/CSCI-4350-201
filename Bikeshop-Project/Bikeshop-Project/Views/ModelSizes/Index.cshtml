@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Bikeshop_Project.Models.ModelSize>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MODELTYPE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MSIZE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TOPTUBE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CHAINSTAY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TOTALLENGTH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GROUNDCLEARANCE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HEADTUBEANGLE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SEATTUBEANGEL)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MODELTYPE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MSIZE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TOPTUBE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CHAINSTAY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TOTALLENGTH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GROUNDCLEARANCE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HEADTUBEANGLE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SEATTUBEANGEL)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

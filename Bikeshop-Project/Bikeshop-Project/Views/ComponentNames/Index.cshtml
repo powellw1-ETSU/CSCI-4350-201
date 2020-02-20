@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Bikeshop_Project.Models.ComponentName>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ASSEMBLYORDER)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DESCRIPTION)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ASSEMBLYORDER)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DESCRIPTION)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.COMPONENTNAME">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.COMPONENTNAME">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.COMPONENTNAME">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,66 @@
+﻿@model Bikeshop_Project.Models.RetailStore
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>RetailStore</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="STOREID" class="control-label"></label>
+                <input asp-for="STOREID" class="form-control" />
+                <span asp-validation-for="STOREID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="STORENAME" class="control-label"></label>
+                <input asp-for="STORENAME" class="form-control" />
+                <span asp-validation-for="STORENAME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PHONE" class="control-label"></label>
+                <input asp-for="PHONE" class="form-control" />
+                <span asp-validation-for="PHONE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CONTACTFIRSTNAME" class="control-label"></label>
+                <input asp-for="CONTACTFIRSTNAME" class="form-control" />
+                <span asp-validation-for="CONTACTFIRSTNAME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CONTACTLASTNAME" class="control-label"></label>
+                <input asp-for="CONTACTLASTNAME" class="form-control" />
+                <span asp-validation-for="CONTACTLASTNAME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ADDRESS" class="control-label"></label>
+                <input asp-for="ADDRESS" class="form-control" />
+                <span asp-validation-for="ADDRESS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ZIPCODE" class="control-label"></label>
+                <input asp-for="ZIPCODE" class="form-control" />
+                <span asp-validation-for="ZIPCODE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CITYID" class="control-label"></label>
+                <input asp-for="CITYID" class="form-control" />
+                <span asp-validation-for="CITYID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

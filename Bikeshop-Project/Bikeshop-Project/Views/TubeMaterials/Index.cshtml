@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Bikeshop_Project.Models.TubeMaterial>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MATERIAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DESCRIPTION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DIAMETER)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.THICKNESS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ROUNDNESS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WEIGHT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.STIFFNESS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LISTPRICE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CONSTRUCTION)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MATERIAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DESCRIPTION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DIAMETER)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.THICKNESS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ROUNDNESS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WEIGHT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.STIFFNESS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LISTPRICE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CONSTRUCTION)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TUBEID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TUBEID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TUBEID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

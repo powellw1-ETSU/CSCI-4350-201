@@ -1,0 +1,103 @@
+﻿@model Bikeshop_Project.Models.Employee
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TAXPAYERID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TAXPAYERID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LASTNAME)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LASTNAME)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FIRSTNAME)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FIRSTNAME)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HOMEPHONE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HOMEPHONE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ADDRESS)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ADDRESS)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ZIPCODE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ZIPCODE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CITYID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CITYID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DATEHIRED)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DATEHIRED)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DATERELEASED)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DATERELEASED)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CURRENTMANAGER)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CURRENTMANAGER)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SALARYGRADE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SALARYGRADE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SALARY)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SALARY)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TITLE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TITLE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WORKAREA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WORKAREA)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.EMPLOYEEID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,67 @@
+﻿@model Bikeshop_Project.Models.PurchaseOrder
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>PurchaseOrder</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EMPLOYEEID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EMPLOYEEID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MANUFACTURERID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MANUFACTURERID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TOTALLIST)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TOTALLIST)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SHIPPINGCOST)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SHIPPINGCOST)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DISCOUNT)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DISCOUNT)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ORDERDATE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ORDERDATE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RECEIVEDATE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RECEIVEDATE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AMOUNTDUE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AMOUNTDUE)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PURCHASEID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
