@@ -22,6 +22,7 @@ namespace Bikeshop_Project.Controllers
         // GET: Bicycles
         public async Task<IActionResult> Index()
         {
+
             return View(await _context.Bicycle.ToListAsync());
         }
 
