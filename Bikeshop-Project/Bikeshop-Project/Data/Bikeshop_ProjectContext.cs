@@ -73,5 +73,7 @@ namespace Bikeshop_Project.Data
         public DbSet<Bikeshop_Project.Models.ManufacturerTransaction> ManufacturerTransaction { get; set; }
 
         public DbSet<Bikeshop_Project.Models.ModelSize> ModelSize { get; set; }
+
+        public DbSet<Bikeshop_Project.Models.Order> Order { get; set; }
     }
 }
