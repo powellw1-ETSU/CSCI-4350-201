@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Bikeshop_Project.Data;
 using Bikeshop_Project.Models;
+using Bikeshop_Project.LoggerModels;
 
 namespace Bikeshop_Project.Controllers
 {
@@ -22,6 +23,14 @@ namespace Bikeshop_Project.Controllers
         // GET: Bicycles
         public async Task<IActionResult> Index()
         {
+            // log information for this page click
+            int id = PageIDs.BICYCLES;
+            DateTime time_stamp = DateTime.UtcNow;
+            string pageTitle = "Bicycles";
+            string userName = "FillerUserName"; // replace when username functionality is added
+            PageInfo pageInfo = new PageInfo(id, time_stamp, pageTitle, userName); // create pageInfo object
+            Logger.logPageInfo(pageInfo); // log information
+
             return View(await _context.Bicycle.ToListAsync());
         }
 
