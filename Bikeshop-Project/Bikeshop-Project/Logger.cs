@@ -2,8 +2,9 @@
 using System.Net.Http;
 using Newtonsoft.Json;
 using System.Text;
+using Bikeshop_Project.LoggerModels;
 
-namespace Bikeshop_Project.Logging
+namespace Bikeshop_Project
 {
     public static class Logger
     {
@@ -14,7 +15,7 @@ namespace Bikeshop_Project.Logging
         private static readonly string userExtension = "userExtension";
 
 
-        static async void logPageInfo(PageInfo page)
+        public static async void logPageInfo(PageInfo page)
         {
             string uri = $"{baseUri}/{pageInfoExtension}";
             var json = JsonConvert.SerializeObject(page);
@@ -22,7 +23,7 @@ namespace Bikeshop_Project.Logging
             await client.PostAsync(uri, content);
         }
 
-        static async void logGeneralInfo(Logs generalLog)
+        public static async void logGeneralInfo(Logs generalLog)
         {
             string uri = $"{baseUri}/{logsExtension}";
             var json = JsonConvert.SerializeObject(generalLog);
@@ -30,7 +31,7 @@ namespace Bikeshop_Project.Logging
             await client.PostAsync(uri, content);
         }
 
-        static async void logUserInfo(User user)
+        public static async void logUserInfo(User user)
         {
             string uri = $"{baseUri}/{userExtension}";
             var json = JsonConvert.SerializeObject(user);
