@@ -9,21 +9,21 @@ namespace Bikeshop_Project
     public static class Logger
     {
         private static readonly HttpClient client = new HttpClient();
-        private static readonly string baseUri = "http://MonitoringTeamAPI";
-        private static readonly string pageInfoExtension = "pageInfo";
+        private static readonly string baseUri = "https://monitoringteamapi.azurewebsites.net/api";
+        private static readonly string pageExtension = "pages";
         private static readonly string logsExtension = "logs";
-        private static readonly string userExtension = "userExtension";
+        private static readonly string userExtension = "applicationusers";
 
 
-        public static async void logPageInfo(PageInfo page)
+        public static async void logPage(PageInfo page)
         {
-            string uri = $"{baseUri}/{pageInfoExtension}";
+            string uri = $"{baseUri}/{pageExtension}";
             var json = JsonConvert.SerializeObject(page);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             await client.PostAsync(uri, content);
         }
 
-        public static async void logGeneralInfo(Logs generalLog)
+        public static async void logLogs(Logs generalLog)
         {
             string uri = $"{baseUri}/{logsExtension}";
             var json = JsonConvert.SerializeObject(generalLog);
@@ -31,7 +31,7 @@ namespace Bikeshop_Project
             await client.PostAsync(uri, content);
         }
 
-        public static async void logUserInfo(User user)
+        public static async void logUsers(User user)
         {
             string uri = $"{baseUri}/{userExtension}";
             var json = JsonConvert.SerializeObject(user);

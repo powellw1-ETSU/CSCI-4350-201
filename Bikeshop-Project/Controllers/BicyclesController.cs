@@ -29,7 +29,7 @@ namespace Bikeshop_Project.Controllers
             string pageTitle = "Bicycles";
             string userName = "FillerUserName"; // replace when username functionality is added
             PageInfo pageInfo = new PageInfo(id, time_stamp, pageTitle, userName); // create pageInfo object
-            Logger.logPageInfo(pageInfo); // log information
+            Logger.logPage(pageInfo); // log information
 
             return View(await _context.Bicycle.ToListAsync());
         }
