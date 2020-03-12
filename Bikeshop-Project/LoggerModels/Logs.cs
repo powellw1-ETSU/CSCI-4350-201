@@ -6,25 +6,25 @@ namespace Bikeshop_Project.LoggerModels
     public class Logs
     {
         [Key]
-        public int Id { get; private set; }
-        public DateTime TIME_STAMP { get; private set; }
-        public string UserName { get; private set; }
-        public DateTime TimeLoggedIn { get; private set; }
-        public DateTime TimeLoggedOut { get; private set; }
-        public int NumberOfPageViews { get; private set; }
-        public TimeSpan SessionDuration { get; private set; }
-        public string PageTitle { get; private set; }
+        public int id { get; private set; }
+        public string timeStamp { get; private set; }
+        public string userName { get; private set; }
+        public string timeLoggedIn { get; private set; }
+        public string timeLoggedOut { get; private set; }
+        public string numberOfPageViews { get; private set; }
+        public string sessionDuration { get; private set; }
+        public string pageTitle { get; private set; }
 
-        public Logs(int Id, DateTime TIME_STAMP, string UserName, DateTime TimeLoggedIn, DateTime TimeLoggedOut, int NumberOfPageViews, TimeSpan SessionDuration, string PageTitle)
+        public Logs(int Id, string TIME_STAMP, string UserName, DateTime TimeLoggedIn, DateTime TimeLoggedOut, int NumberOfPageViews, string PageTitle)
         {
-            this.Id = Id;
-            this.TIME_STAMP = TIME_STAMP;
-            this.UserName = UserName;
-            this.TimeLoggedIn = TimeLoggedIn;
-            this.TimeLoggedOut = TimeLoggedOut;
-            this.NumberOfPageViews = NumberOfPageViews;
-            this.SessionDuration = SessionDuration;
-            this.PageTitle = PageTitle;
+            this.id = Id;
+            this.timeStamp = TIME_STAMP;
+            this.userName = UserName;
+            this.timeLoggedIn = TimeLoggedIn.ToString();
+            this.timeLoggedOut = TimeLoggedOut.ToString();
+            this.numberOfPageViews = NumberOfPageViews.ToString();
+            this.sessionDuration = (TimeLoggedOut - TimeLoggedIn).ToString();
+            this.pageTitle = PageTitle;
         }
     }
 }

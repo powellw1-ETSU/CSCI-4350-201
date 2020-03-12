@@ -24,11 +24,10 @@ namespace Bikeshop_Project.Controllers
         public async Task<IActionResult> Index()
         {
             // log information for this page click
-            int id = PageIDs.BICYCLES;
-            DateTime time_stamp = DateTime.UtcNow;
+            string time_stamp = DateTime.UtcNow.ToString();
             string pageTitle = "Bicycles";
-            string userName = "FillerUserName"; // replace when username functionality is added
-            PageInfo pageInfo = new PageInfo(id, time_stamp, pageTitle, userName); // create pageInfo object
+            string userName = "LogansTest"; // replace when username functionality is added
+            PageInfo pageInfo = new PageInfo(time_stamp, pageTitle, userName); // create pageInfo object
             Logger.logPage(pageInfo); // log information
 
             return View(await _context.Bicycle.ToListAsync());

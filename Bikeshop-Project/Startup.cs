@@ -29,6 +29,9 @@ namespace Bikeshop_Project
 
             services.AddDbContext<Bikeshop_ProjectContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("Bikeshop_ProjectContext")));
+
+            // Register the Swagger services
+            services.AddSwaggerDocument();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +47,14 @@ namespace Bikeshop_Project
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            // Register the Swagger generator and the Swagger UI middlewares
+            if (env.IsDevelopment())
+            {
+                app.UseOpenApi();
+                app.UseSwaggerUi3();
+            }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -61,6 +72,7 @@ namespace Bikeshop_Project
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
         }
     }
 }

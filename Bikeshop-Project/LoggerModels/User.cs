@@ -6,17 +6,13 @@ namespace Bikeshop_Project.LoggerModels
     public class User
     {
         [Key]
-        public string UserName { get; private set; }
-        public string IPAddress { get; private set; }
-        public string Country { get; private set; }
-        public string City { get; private set; }
+        public string id { get; private set; }
+        public string userName { get; private set; }
 
-        public User(string UserName, string IPAddress, string Country, string City)
+        public User(string id, string username)
         {
-            this.UserName = UserName;
-            this.IPAddress = IPAddress;
-            this.Country = Country;
-            this.City = City;
+            this.id = id;
+            this.userName = userName;
         }
     }
 }

@@ -20,7 +20,8 @@ namespace Bikeshop_Project
             string uri = $"{baseUri}/{pageExtension}";
             var json = JsonConvert.SerializeObject(page);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
-            await client.PostAsync(uri, content);
+            HttpResponseMessage response = await client.PostAsync(uri, content);
+            Console.WriteLine("Hello");
         }
 
         public static async void logLogs(Logs generalLog)
