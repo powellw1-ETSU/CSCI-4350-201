@@ -9,9 +9,8 @@ namespace Bikeshop_Project.LoggerModels
         public string id { get; private set; }
         public string userName { get; private set; }
 
-        public User(string id, string username)
+        public User(string userName)
         {
-            this.id = id;
             this.userName = userName;
         }
     }

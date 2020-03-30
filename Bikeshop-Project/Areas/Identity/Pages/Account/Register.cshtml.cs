@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using Bikeshop_Project.LoggerModels;
 
 namespace Bikeshop_Project.Areas.Identity.Pages.Account
 {

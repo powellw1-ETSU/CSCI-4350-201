@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Bikeshop_Project.Validation;
 
 namespace Bikeshop_Project.Models
 {
     public class Employee
     {
-         public decimal EMPLOYEEID { get; set; }
+        public decimal EMPLOYEEID { get; set; }
 
         public string TAXPAYERID { get; set; }
 
@@ -15,6 +17,7 @@ namespace Bikeshop_Project.Models
 
         public string FIRSTNAME { get; set; }
 
+        [PhoneNumberValidation(ErrorMessage = "Please enter a correct phone number")]
         public string HOMEPHONE { get; set; }
 
         public string ADDRESS { get; set; }
