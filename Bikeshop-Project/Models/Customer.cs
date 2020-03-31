@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Bikeshop_Project.Validation;
 
 namespace Bikeshop_Project.Models
 {
@@ -9,6 +10,7 @@ namespace Bikeshop_Project.Models
     {
         public decimal CUSTOMERID { get; set; }
 
+        [PhoneNumberValidation(ErrorMessage = "Please enter a correct phone number")]
         public string PHONE { get; set; }
 
         public string FIRSTNAME { get; set; }

@@ -22,6 +22,7 @@ namespace Bikeshop_Project.Models
 
         public string ADDRESS { get; set; }
 
+        [ZipCodeValidation(ErrorMessage = "Please enter a correct zipcode")]
         public string ZIPCODE { get; set; }
 
         public decimal CITYID { get; set; }
@@ -34,6 +35,7 @@ namespace Bikeshop_Project.Models
 
         public decimal SALARYGRADE { get; set; }
 
+        [Range(0, 100000000000000, ErrorMessage = "Salary may not be negative")]
         public decimal SALARY { get; set; }
 
         public string TITLE { get; set; }
