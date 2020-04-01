@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Bikeshop_Project.Validation;
 using Xunit;
 
-namespace Bikeshop_Project.Tests
+namespace Bikeshop_Project.Tests.Input
 {
     public class ZipCodeValidationTests
     {

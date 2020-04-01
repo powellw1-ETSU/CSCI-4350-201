@@ -2,7 +2,7 @@ using System;
 using Xunit;
 using Bikeshop_Project.Validation;
 
-namespace Bikeshop_Project.Tests
+namespace Bikeshop_Project.Tests.Input
 {
     public class PhoneNumberValidationTests
     {
