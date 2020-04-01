@@ -1,4 +1,5 @@
 ﻿using System;
+using Bikeshop_Project.Validation;
 
 namespace Bikeshop_Project.Models
 {
@@ -6,6 +7,7 @@ namespace Bikeshop_Project.Models
     {
         public string CityId { get; set; }
 
+        [ZipCodeValidation(ErrorMessage = "Please enter a zip code of correct US format")]
         public string ZIPCODE { get; set; }
 
         public string CITY { get; set; }
