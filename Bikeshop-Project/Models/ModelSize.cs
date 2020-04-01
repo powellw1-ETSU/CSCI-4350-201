@@ -14,6 +14,6 @@ namespace Bikeshop_Project.Models
         public double TOTALLENGTH { get; set; }
         public double GROUNDCLEARANCE { get; set; }
         public double HEADTUBEANGLE { get; set; }
-        public double SEATTUBEANGEL { get; set; }
+        public double SEATTUBEANGLE { get; set; }
     }
 }
