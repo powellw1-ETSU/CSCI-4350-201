@@ -31,7 +31,9 @@
                         </button>
                         <div class="dropdown-menu">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Customers" asp-action="Index">Customers</a>
+                            <div class="dropdown-divider"></div>
                             <a class="nav-link text-dark" asp-area="" asp-controller="CustomerTransactions" asp-action="Index">Transactions</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Cities" asp-action="Index">Cities</a>
                         </div>
                     </div>
 
@@ -42,6 +44,7 @@
                         </button>
                         <div class="dropdown-menu">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Manufacturers" asp-action="Index">Manufacturers</a>
+                            <div class="dropdown-divider"></div>
                             <a class="nav-link text-dark" asp-area="" asp-controller="ManufacturerTransactions" asp-action="Index">MfrTransaction</a>
                         </div>
                     </div>
@@ -58,6 +61,8 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="BIKETUBES" asp-action="Index">Tubes</a>
                             <a class="nav-link text-dark" asp-area="" asp-controller="BICYCLETUBEUSAGES" asp-action="Index">Tube Usages</a>
                             <a class="nav-link text-dark" asp-area="" asp-controller="LETTERSTYLES" asp-action="Index">Letter Style</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ModelTypes" asp-action="Index">Model Types</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Paints" asp-action="Index">Paints</a>
                         </div>
                     </div>
 
@@ -78,20 +83,18 @@
                         </button>
                         <div class="dropdown-menu">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Workareas" asp-action="Index">Workareas</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="RetailStores" asp-action="Index">Retail Stores</a>
+
                         </div>
                     </div>
 
                     <div class="btn-group">
-                        <button type="button" class="btn btn-success">Tasks</button>
-                        <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" class="btn btn-secondary">Documentation</button>
+                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Documentation" asp-action="Index">Visit Documentation</a>
                         </div>
                     </div>
 
