@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using Bikeshop_Project.Models;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Bikeshop_Project.Data
 {
     public class Bikeshop_ProjectContext : DbContext
     {
-        public Bikeshop_ProjectContext (DbContextOptions<Bikeshop_ProjectContext> options)
+        public Bikeshop_ProjectContext(DbContextOptions<Bikeshop_ProjectContext> options)
             : base(options)
         {
         }

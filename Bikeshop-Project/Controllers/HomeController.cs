@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Bikeshop_Project.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Bikeshop_Project.Models;
-using Microsoft.AspNetCore.Identity;
+using System.Diagnostics;
 
 namespace Bikeshop_Project.Controllers
 {

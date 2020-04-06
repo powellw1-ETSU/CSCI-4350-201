@@ -1,5 +1,4 @@
-﻿using System;
-using Bikeshop_Project.Validation;
+﻿using Bikeshop_Project.Validation;
 
 namespace Bikeshop_Project.Models
 {

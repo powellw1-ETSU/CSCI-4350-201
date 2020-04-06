@@ -1,6 +1,5 @@
-using System;
-using Xunit;
 using Bikeshop_Project.Validation;
+using Xunit;
 
 namespace Bikeshop_Project.Tests.Input
 {

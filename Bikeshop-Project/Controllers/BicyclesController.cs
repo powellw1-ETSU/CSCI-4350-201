@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Bikeshop_Project.Data;
+using Bikeshop_Project.LoggerModels;
+using Bikeshop_Project.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Bikeshop_Project.Data;
-using Bikeshop_Project.Models;
-using Bikeshop_Project.LoggerModels;
 
 namespace Bikeshop_Project.Controllers
 {
