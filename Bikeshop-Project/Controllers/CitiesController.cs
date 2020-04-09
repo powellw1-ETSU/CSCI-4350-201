@@ -26,7 +26,7 @@ namespace Bikeshop_Project.Controllers
         }
 
         // GET: Cities/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(decimal? id)
         {
             if (id == null)
             {
@@ -66,7 +66,7 @@ namespace Bikeshop_Project.Controllers
         }
 
         // GET: Cities/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(decimal? id)
         {
             if (id == null)
             {
@@ -86,7 +86,7 @@ namespace Bikeshop_Project.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("CityId,ZIPCODE,CITY,STATE,AREACODE,POPULATION1990,POPULATION1980,COUNTRY,LATITUDE,LONGITUDE,POPULATIONCDF")] City city)
+        public async Task<IActionResult> Edit(decimal id, [Bind("CityId,ZIPCODE,CITY,STATE,AREACODE,POPULATION1990,POPULATION1980,COUNTRY,LATITUDE,LONGITUDE,POPULATIONCDF")] City city)
         {
             if (id != city.CityId)
             {
@@ -117,7 +117,7 @@ namespace Bikeshop_Project.Controllers
         }
 
         // GET: Cities/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete(decimal? id)
         {
             if (id == null)
             {
@@ -137,7 +137,7 @@ namespace Bikeshop_Project.Controllers
         // POST: Cities/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public async Task<IActionResult> DeleteConfirmed(decimal id)
         {
             var city = await _context.City.FindAsync(id);
             _context.City.Remove(city);
@@ -145,7 +145,7 @@ namespace Bikeshop_Project.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool CityExists(string id)
+        private bool CityExists(decimal id)
         {
             return _context.City.Any(e => e.CityId == id);
         }

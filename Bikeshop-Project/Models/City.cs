@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Bikeshop_Project.Validation;
 
 namespace Bikeshop_Project.Models
 {
     public class City
     {
-        public string CityId { get; set; }
+        public decimal CityId { get; set; }
 
+        [ZipCodeValidation(ErrorMessage = "Please enter a zip code of correct US format")]
         public string ZIPCODE { get; set; }
 
         public string CITY { get; set; }
@@ -26,7 +27,6 @@ namespace Bikeshop_Project.Models
 
         public double POPULATIONCDF { get; set; }
 
-        public bool ShowCityId => !string.IsNullOrEmpty(CityId);
     }
 }
 

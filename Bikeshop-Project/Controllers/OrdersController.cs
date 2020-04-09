@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Bikeshop_Project.Data;
+﻿using Bikeshop_Project.Data;
 using Bikeshop_Project.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace Bikeshop_Project.Controllers
 {
@@ -26,23 +21,23 @@ namespace Bikeshop_Project.Controllers
             return View();
         }
 
-/*        // GET: Orders/Details/5
-        public async Task<IActionResult> Details(decimal? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+        /*        // GET: Orders/Details/5
+                public async Task<IActionResult> Details(decimal? id)
+                {
+                    if (id == null)
+                    {
+                        return NotFound();
+                    }
 
-            var order = await _context.Order
-                .FirstOrDefaultAsync(m => m.OrderID == id);
-            if (order == null)
-            {
-                return NotFound();
-            }
+                    var order = await _context.Order
+                        .FirstOrDefaultAsync(m => m.OrderID == id);
+                    if (order == null)
+                    {
+                        return NotFound();
+                    }
 
-            return View(order);
-        }*/
+                    return View(order);
+                }*/
 
         // GET: Orders/Create
         public IActionResult Create()

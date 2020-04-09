@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Bikeshop_Project.Validation;
+using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Bikeshop_Project.Models
 {
     public class Employee
     {
-         public decimal EMPLOYEEID { get; set; }
+        public decimal EMPLOYEEID { get; set; }
 
         public string TAXPAYERID { get; set; }
 
@@ -15,10 +14,12 @@ namespace Bikeshop_Project.Models
 
         public string FIRSTNAME { get; set; }
 
+        [PhoneNumberValidation(ErrorMessage = "Please enter a correct phone number")]
         public string HOMEPHONE { get; set; }
 
         public string ADDRESS { get; set; }
 
+        [ZipCodeValidation(ErrorMessage = "Please enter a correct zipcode")]
         public string ZIPCODE { get; set; }
 
         public decimal CITYID { get; set; }
@@ -31,6 +32,7 @@ namespace Bikeshop_Project.Models
 
         public decimal SALARYGRADE { get; set; }
 
+        [Range(0, 100000000000000, ErrorMessage = "Salary may not be negative")]
         public decimal SALARY { get; set; }
 
         public string TITLE { get; set; }
