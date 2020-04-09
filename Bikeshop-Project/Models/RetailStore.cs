@@ -1,6 +1,5 @@
-﻿using System;
+﻿using Bikeshop_Project.Validation;
 using System.ComponentModel.DataAnnotations;
-using Bikeshop_Project.Validation;
 
 namespace Bikeshop_Project.Models
 {

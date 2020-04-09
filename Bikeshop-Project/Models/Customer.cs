@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Bikeshop_Project.Validation;
+﻿using Bikeshop_Project.Validation;
 
 namespace Bikeshop_Project.Models
 {

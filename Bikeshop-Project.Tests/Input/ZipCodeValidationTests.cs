@@ -1,5 +1,4 @@
-﻿using System;
-using Bikeshop_Project.Validation;
+﻿using Bikeshop_Project.Validation;
 using Xunit;
 
 namespace Bikeshop_Project.Tests.Input
@@ -44,5 +43,5 @@ namespace Bikeshop_Project.Tests.Input
         {
             Assert.False(_validation.IsValid(zipCode));
         }
-    } 
+    }
 }

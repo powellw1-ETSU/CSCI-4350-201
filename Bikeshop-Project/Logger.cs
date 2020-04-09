@@ -1,8 +1,8 @@
-﻿using System;
-using System.Net.Http;
+﻿using Bikeshop_Project.LoggerModels;
 using Newtonsoft.Json;
+using System;
+using System.Net.Http;
 using System.Text;
-using Bikeshop_Project.LoggerModels;
 
 namespace Bikeshop_Project
 {
