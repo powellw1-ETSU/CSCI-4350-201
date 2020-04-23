@@ -25,8 +25,6 @@ namespace Bikeshop_Project
             services.AddDbContext<Bikeshop_ProjectContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("Bikeshop_ProjectContext")));
 
-            // Register the Swagger services
-            services.AddSwaggerDocument();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
