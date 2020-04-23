@@ -48,7 +48,7 @@ namespace Bikeshop_Project
                 app.UseSwaggerUi3();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
