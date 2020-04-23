@@ -80,7 +80,7 @@ namespace Bikeshop_Project.LoggerModels
 
         public void setPageTitle()
         {
-            this.pageTitle = "LogOut Page";
+            this.pageTitle = "Bicycles";
         }
         #endregion
     }

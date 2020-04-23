@@ -2,6 +2,13 @@
 
 @{
     ViewData["Title"] = "Index";
+
+    // if a user is logged in, update logging information for monitoring team metrics
+    if (Logger.returnUserLogInStatus())
+    {
+        Logger.numberofPageViews++;         // Add number of page views for general user session
+        Logger.LogPageClick("Cities");    // send log to monitoring team to show a new page click has occured.    
+    }
 }
 
 <h1>Index</h1>

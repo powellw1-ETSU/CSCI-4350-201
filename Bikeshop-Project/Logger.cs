@@ -21,8 +21,9 @@ namespace Bikeshop_Project
         private static Logs sessionLogs;
         private static DateTime loggedIn;
         private static bool UserLoggedIn = false;
+        private static string userName;
 
-        public static int numberofPageViews = 0;
+        public static int numberofPageViews;
 
 
         /// <summary>
@@ -62,6 +63,7 @@ namespace Bikeshop_Project
             await client.PostAsync(uri, content);
         }
 
+        #region General Session Logging
         /// <summary>
         /// When a user logs in and/or registers for our application, begin a log session
         /// </summary>
@@ -72,7 +74,10 @@ namespace Bikeshop_Project
             // Create sessionLogs session
             sessionLogs = new Logs();
 
+            // Assign private fields values
             loggedIn = timeLoggedIn;
+            Logger.userName = userName;
+            numberofPageViews = 0;  // set number of page views to 0 intially.
 
             // Assign starting session information
             sessionLogs.setUserName(userName);
@@ -86,7 +91,7 @@ namespace Bikeshop_Project
         public static void endLogsSession(DateTime timeLoggedOut)
         {
             // Create timespan object to represent session duration
-            TimeSpan duration = loggedIn - timeLoggedOut;
+            TimeSpan duration = timeLoggedOut - loggedIn;
 
             // set remaining info for logs for this session
             sessionLogs.setTimeStamp(DateTime.Now.ToString());
@@ -94,7 +99,25 @@ namespace Bikeshop_Project
             sessionLogs.setNumberOfPageViews(numberofPageViews.ToString());
             sessionLogs.setSessionDuration(duration.ToString());
             sessionLogs.setPageTitle();
+
+            Logger.logLogs(sessionLogs); // Send log data to the monitoring team
         }
+        #endregion
+
+        #region Page Click Logging
+
+        /// <summary>
+        /// Each time a page is clicked (when a user is logged in), this method is called
+        /// to log the page click
+        /// </summary>
+        /// <param name="pageTitle">name of page clicked</param>
+        public static void LogPageClick(string pageTitle)
+        {
+            PageInfo pageClick = new PageInfo(DateTime.Now.ToString(), pageTitle, Logger.userName);
+            Logger.logPage(pageClick);
+        }
+
+        #endregion
 
         #region User logged in status
         /// <summary>
