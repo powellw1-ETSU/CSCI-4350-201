@@ -21,13 +21,6 @@ namespace Bikeshop_Project.Controllers
         // GET: Bicycles
         public async Task<IActionResult> Index()
         {
-            // log information for this page click
-            string time_stamp = DateTime.UtcNow.ToString();
-            string pageTitle = "Bicycles";
-            string userName = "LogansTest"; // replace when username functionality is added
-            PageInfo pageInfo = new PageInfo(time_stamp, pageTitle, userName); // create pageInfo object
-            Logger.logPage(pageInfo); // log information
-
             return View(await _context.Bicycle.ToListAsync());
         }
 
