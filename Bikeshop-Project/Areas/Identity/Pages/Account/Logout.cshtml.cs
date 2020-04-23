@@ -27,6 +27,9 @@ namespace Bikeshop_Project.Areas.Identity.Pages.Account
         {
             await _signInManager.SignOutAsync();
             _logger.LogInformation("User logged out.");
+
+            // Update Logger to reflect that user has now logged in
+            Logger.setUserLogInFalse();
             if (returnUrl != null)
             {
                 return LocalRedirect(returnUrl);
