@@ -2,9 +2,17 @@
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    // if a user is logged in, update logging information for monitoring team metrics
+    if (Logger.returnUserLogInStatus())
+    {
+        Logger.numberofPageViews++;         // Add number of page views for general user session
+        Logger.LogPageClick("Paints");    // send log to monitoring team to show a new page click has occured.    
+    }
 }
 
-<h1>Index</h1>
+<h1>Paints</h1>
 
 <p>
     <a asp-action="Create">Create New</a>

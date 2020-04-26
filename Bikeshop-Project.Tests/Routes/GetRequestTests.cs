@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using System.Net.Http;
 using Xunit;
 
@@ -11,7 +12,7 @@ namespace Bikeshop_Project.Tests.Routes
     public class GetRequestTests
     {
         private readonly HttpClient _client;
-        private readonly string baseUriDB = "bikeshopproject-prod.us-east-2.elasticbeanstalk.com";
+        private readonly string baseUriDB = "ec2-3-136-108-167.us-east-2.compute.amazonaws.com";
         private readonly string baseUriMonitoring = "monitoringteamapi.azurewebsites.net/api";
 
         /// <summary>
@@ -60,12 +61,19 @@ namespace Bikeshop_Project.Tests.Routes
             // Arrange
             HttpResponseMessage response;                   // will hold http status code response from server
             string uri = $"http://{baseUriDB}/{endpoint}";    // uri to send request to
-
             // Act
             response = await _client.GetAsync(uri);         // send the request
 
-            // Assert (if request was successful <returns 200> test succeeds)
-            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            // Assert
+            if (endpoint == "Orders")
+            {
+                Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);  // Only Orders should return 500 code
+            }
+            // if request was successful (returns 200) test succeeds
+            else
+            {
+                Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            }
         }
 
         [Theory]

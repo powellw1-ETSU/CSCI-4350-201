@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Index";
+
+    // if a user is logged in, update logging information for monitoring team metrics
+    if (Logger.returnUserLogInStatus())
+    {
+        Logger.numberofPageViews++;         // Add number of page views for general user session
+        Logger.LogPageClick("Site Support");    // send log to monitoring team to show a new page click has occured.    
+    }
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Site Support</h1>
+        <p>Thank you so much for being a valued customer of Bike Shop Database!
+        <br>We're dedicated to providing you the highest quality experience through our website interface.
+        <br>Should you have any issues complaints or concerns feel free to report them to <a href="mailto:BikeShopSupport@gmail.com">BikeShopSupport@gmail.com</a>.
+        <br>And again thank you for your business!</p>
+        
+        <div class="text-left">
+            <P>Sincerely,
+            <br>Bike Shop Suport Team</p>
+        </div>
+    </div>
+
+

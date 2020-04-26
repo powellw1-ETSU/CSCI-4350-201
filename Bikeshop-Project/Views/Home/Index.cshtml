@@ -1,11 +1,18 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+
+    // if a user is logged in, update logging information for monitoring team metrics
+    if (Logger.returnUserLogInStatus())
+    {
+        Logger.numberofPageViews++;         // Add number of page views for general user session
+        Logger.LogPageClick("Home");    // send log to monitoring team to show a new page click has occured.    
+    }
 }
 
     <div class="text-center">
         <h1 class="display-4">Bike Shop</h1>
         <p>Solid Frames and durable wheels. Custom made bikes to fit your needs down to the angle of the head tube.</p>
-        <p> Please use the navigation bars above to achieve your goals.</p>
+        <p> Please use the navigation menu above to achieve your goals.</p>
         <p> Customers, please click the button below to fill out an order form</p>
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-controller="Orders" asp-action="Create">Order Now!</a>
