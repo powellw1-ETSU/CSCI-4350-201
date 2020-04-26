@@ -1,9 +1,12 @@
-﻿using Bikeshop_Project.Data;
-using Bikeshop_Project.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using Bikeshop_Project.Data;
+using Bikeshop_Project.Models;
 
 namespace Bikeshop_Project.Controllers
 {
@@ -23,7 +26,7 @@ namespace Bikeshop_Project.Controllers
         }
 
         // GET: TubeMaterials/Details/5
-        public async Task<IActionResult> Details(decimal? id)
+        public async Task<IActionResult> Details(double? id)
         {
             if (id == null)
             {
@@ -63,7 +66,7 @@ namespace Bikeshop_Project.Controllers
         }
 
         // GET: TubeMaterials/Edit/5
-        public async Task<IActionResult> Edit(decimal? id)
+        public async Task<IActionResult> Edit(double? id)
         {
             if (id == null)
             {
@@ -83,7 +86,7 @@ namespace Bikeshop_Project.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(decimal id, [Bind("TUBEID,MATERIAL,DESCRIPTION,DIAMETER,THICKNESS,ROUNDNESS,WEIGHT,STIFFNESS,LISTPRICE,CONSTRUCTION")] TubeMaterial tubeMaterial)
+        public async Task<IActionResult> Edit(double id, [Bind("TUBEID,MATERIAL,DESCRIPTION,DIAMETER,THICKNESS,ROUNDNESS,WEIGHT,STIFFNESS,LISTPRICE,CONSTRUCTION")] TubeMaterial tubeMaterial)
         {
             if (id != tubeMaterial.TUBEID)
             {
@@ -114,7 +117,7 @@ namespace Bikeshop_Project.Controllers
         }
 
         // GET: TubeMaterials/Delete/5
-        public async Task<IActionResult> Delete(decimal? id)
+        public async Task<IActionResult> Delete(double? id)
         {
             if (id == null)
             {
@@ -134,7 +137,7 @@ namespace Bikeshop_Project.Controllers
         // POST: TubeMaterials/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(decimal id)
+        public async Task<IActionResult> DeleteConfirmed(double id)
         {
             var tubeMaterial = await _context.TubeMaterial.FindAsync(id);
             _context.TubeMaterial.Remove(tubeMaterial);
@@ -142,7 +145,7 @@ namespace Bikeshop_Project.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool TubeMaterialExists(decimal id)
+        private bool TubeMaterialExists(double id)
         {
             return _context.TubeMaterial.Any(e => e.TUBEID == id);
         }

@@ -2,10 +2,9 @@
 
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Paints</h1>
+<h1>Index</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -25,9 +24,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.DATEINTRODUCED)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DATEDISCONTINUED)
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -45,9 +41,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DATEINTRODUCED)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DATEDISCONTINUED)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.PAINTID">Edit</a> |

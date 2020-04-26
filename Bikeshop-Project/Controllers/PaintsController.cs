@@ -1,9 +1,12 @@
-﻿using Bikeshop_Project.Data;
-using Bikeshop_Project.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using Bikeshop_Project.Data;
+using Bikeshop_Project.Models;
 
 namespace Bikeshop_Project.Controllers
 {
@@ -51,7 +54,7 @@ namespace Bikeshop_Project.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PAINTID,COLORNAME,COLORSTYLE,COLORLIST,DATEINTRODUCED,DATEDISCONTINUED")] Paint paint)
+        public async Task<IActionResult> Create([Bind("PAINTID,COLORNAME,COLORSTYLE,COLORLIST,DATEINTRODUCED")] Paint paint)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +86,7 @@ namespace Bikeshop_Project.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(decimal id, [Bind("PAINTID,COLORNAME,COLORSTYLE,COLORLIST,DATEINTRODUCED,DATEDISCONTINUED")] Paint paint)
+        public async Task<IActionResult> Edit(decimal id, [Bind("PAINTID,COLORNAME,COLORSTYLE,COLORLIST,DATEINTRODUCED")] Paint paint)
         {
             if (id != paint.PAINTID)
             {
