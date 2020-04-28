@@ -6,7 +6,7 @@ namespace Bikeshop_Project.Models
     public class TubeMaterial
     {
         [Key]
-        public Decimal TUBEID { get; set; }
+        public Double TUBEID { get; set; }
         public String MATERIAL { get; set; }
         public String DESCRIPTION { get; set; }
         public Double DIAMETER { get; set; }
