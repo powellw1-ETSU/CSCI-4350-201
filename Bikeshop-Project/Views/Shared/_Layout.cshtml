@@ -6,6 +6,18 @@
     <title>@ViewData["Title"] - Bikeshop_Project</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".dropdown, .btn-group").hover(function () {
+                var dropdownMenu = $(this).children(".dropdown-menu");
+                if (dropdownMenu.is(":visible")) {
+                    dropdownMenu.parent().toggleClass("open");
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -20,38 +32,32 @@
                 <div class="bd-example">
 
                     <div class="btn-group">
-                        <button type="button" class="btn btn-primary">Customer</button>
-                        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="sr-only">Toggle Dropdown</span>
+                        <button type="button" class="btn btn-primary" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Customer
                         </button>
                         <div class="dropdown-menu">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Customers" asp-action="Index">Customers</a>
-                            <div class="dropdown-divider"></div>
                             <a class="nav-link text-dark" asp-area="" asp-controller="CustomerTransactions" asp-action="Index">Transactions</a>
                             <a class="nav-link text-dark" asp-area="" asp-controller="Cities" asp-action="Index">Cities</a>
                         </div>
                     </div>
 
                     <div class="btn-group">
-                        <button type="button" class="btn btn-secondary">Manufacturing</button>
-                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="sr-only">Toggle Dropdown</span>
+                        <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Manufacturing
                         </button>
                         <div class="dropdown-menu">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Manufacturers" asp-action="Index">Manufacturers</a>
-                            <div class="dropdown-divider"></div>
                             <a class="nav-link text-dark" asp-area="" asp-controller="ManufacturerTransactions" asp-action="Index">MfrTransaction</a>
                         </div>
                     </div>
 
                     <div class="btn-group">
-                        <button type="button" class="btn btn-success">Bikes</button>
-                        <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="sr-only">Toggle Dropdown</span>
+                        <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Bikes
                         </button>
                         <div class="dropdown-menu">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Bicycles" asp-action="Index">Bicycles</a>
-                            <div class="dropdown-divider"></div>
                             <a class="nav-link text-dark" asp-area="" asp-controller="BIKEPARTS" asp-action="Index">Parts</a>
                             <a class="nav-link text-dark" asp-area="" asp-controller="BIKETUBES" asp-action="Index">Tubes</a>
                             <a class="nav-link text-dark" asp-area="" asp-controller="BICYCLETUBEUSAGES" asp-action="Index">Tube Usages</a>
@@ -62,9 +68,8 @@
                     </div>
 
                     <div class="btn-group">
-                        <button type="button" class="btn btn-primary">Employee</button>
-                        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="sr-only">Toggle Dropdown</span>
+                        <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Employee
                         </button>
                         <div class="dropdown-menu">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Employees" asp-action="Create">Add Employee</a>
@@ -72,21 +77,18 @@
                     </div>
 
                     <div class="btn-group">
-                        <button type="button" class="btn btn-secondary">Stores</button>
-                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="sr-only">Toggle Dropdown</span>
+                        <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Stores
                         </button>
                         <div class="dropdown-menu">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Workareas" asp-action="Index">Workareas</a>
                             <a class="nav-link text-dark" asp-area="" asp-controller="RetailStores" asp-action="Index">Retail Stores</a>
-
                         </div>
                     </div>
 
                     <div class="btn-group">
-                        <button type="button" class="btn btn-secondary">Documentation</button>
-                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="sr-only">Toggle Dropdown</span>
+                        <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Documentation
                         </button>
                         <div class="dropdown-menu">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Documentation" asp-action="Index">API Documentation</a>
