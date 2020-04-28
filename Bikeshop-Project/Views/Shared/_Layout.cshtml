@@ -32,10 +32,10 @@
                 <div class="bd-example">
 
                     <div class="btn-group">
-                        <button type="button" class="btn btn-primary" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Customer
                         </button>
-                        <div class="dropdown-menu">
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Customers" asp-action="Index">Customers</a>
                             <a class="nav-link text-dark" asp-area="" asp-controller="CustomerTransactions" asp-action="Index">Transactions</a>
                             <a class="nav-link text-dark" asp-area="" asp-controller="Cities" asp-action="Index">Cities</a>

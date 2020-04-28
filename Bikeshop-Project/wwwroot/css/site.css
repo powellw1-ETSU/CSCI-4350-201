@@ -13,15 +13,19 @@ a {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #2B3990;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #2B3990;
+    border-color: #2B3990;
 }
+
+ .btn-primary:hover {
+    background-color: #2B3990;
+ }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: #fff;
-    background-color: #FEB607;
-    border-color: #1861ac;
+    background-color: #2B3990;
+    border-color: #2B3990;
 }
 
 /* Sticky footer styles
