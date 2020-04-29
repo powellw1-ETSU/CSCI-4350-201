@@ -65,7 +65,7 @@ namespace Bikeshop_Project.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("paint, letterstyle, modeltype, spare_kits_quantity,")] dynamic orderdetails)
+        public async Task<IActionResult> Create([Bind("paint, letterstyle, modeltype, spare_kits_quantity,")] OrderDetails orderdetails)
         {
 
             //THIS IS WHERE WE COLLECT ADDITIONAL METRICS
@@ -84,17 +84,22 @@ namespace Bikeshop_Project.Controllers
                 
                 Bicycle newBike = new Bicycle();
 
-                newBike.PAINTID = orderdetails.paint;
-                newBike.LETTERSTYLEID = orderdetails.LETTERSTYLE;
-                newBike.MODELTYPE = orderdetails.MODELTYPE;
+                newBike.PAINTID = orderdetails.paintID;
+                newBike.LETTERSTYLEID = orderdetails.letterStyle;
+                newBike.MODELTYPE = orderdetails.modelType;
                 newBike.SERIALNUMBER = 0;//create random serial here
 
-                OrderMetric newMetric = new OrderMetric();
 
-                newMetric.totalCost = orderdetails.spare_kits_quantity * 45.00;
+
+                OrderMetric newMetric = new OrderMetric();
+                newMetric.totalCost = System.Decimal.Multiply(orderdetails.kitQuantity , 45);
                 newMetric.bicycleID = newBike.SERIALNUMBER;
-                newMetric.purchaseDate = System.DateTime.Now;
+                newMetric.purchaseDate = System.DateTime.Now.ToString("MM/dd/yyyy hh:mm tt");
+                
+                
                 newMetric.customerID = 0;//get customer info
+                
+                
                 _context.Add(newBike);
 
                 
