@@ -21,42 +21,39 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Bike Shop</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom box-shadow mb-3">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Bike Shop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="bd-example">
-
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Customer
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Customers" asp-action="Index">Customers</a>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="CustomerTransactions" asp-action="Index">Transactions</a>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cities" asp-action="Index">Cities</a>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" asp-area="" asp-controller="Customers" asp-action="Index">Customers</a>
+                            <a class="dropdown-item" asp-area="" asp-controller="CustomerTransactions" asp-action="Index">Transactions</a>
+                            <a class="dropdown-item" asp-area="" asp-controller="Cities" asp-action="Index">Cities</a>
                         </div>
-                    </div>
-
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Manufacturing
-                        </button>
-                        <div class="dropdown-menu">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Manufacturers" asp-action="Index">Manufacturers</a>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ManufacturerTransactions" asp-action="Index">MfrTransaction</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ManufacturerTransactions" asp-action="Index">Manufacturer Transactions</a>
                         </div>
-                    </div>
-
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Bikes
-                        </button>
-                        <div class="dropdown-menu">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Bicycles" asp-action="Index">Bicycles</a>
                             <a class="nav-link text-dark" asp-area="" asp-controller="BIKEPARTS" asp-action="Index">Parts</a>
                             <a class="nav-link text-dark" asp-area="" asp-controller="BIKETUBES" asp-action="Index">Tubes</a>
@@ -65,44 +62,41 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="ModelTypes" asp-action="Index">Model Types</a>
                             <a class="nav-link text-dark" asp-area="" asp-controller="Paints" asp-action="Index">Paints</a>
                         </div>
-                    </div>
-
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Employee
-                        </button>
-                        <div class="dropdown-menu">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Employees" asp-action="Create">Add Employee</a>
                         </div>
-                    </div>
-
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Stores
-                        </button>
-                        <div class="dropdown-menu">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Workareas" asp-action="Index">Workareas</a>
                             <a class="nav-link text-dark" asp-area="" asp-controller="RetailStores" asp-action="Index">Retail Stores</a>
                         </div>
-                    </div>
-
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Documentation
-                        </button>
-                        <div class="dropdown-menu">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Documentation" asp-action="Index">API Documentation</a>
                             <a class="nav-link text-dark" asp-area="" asp-controller="AboutUs" asp-action="Index">About Us</a>
                             <a class="nav-link text-dark" asp-area="" asp-controller="SiteSupport" asp-action="Index">Site Support</a>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                <partial name="_LoginPartial" />
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <partial name="_LoginPartial" />
+                </form>
             </div>
         </nav>
+        
     </header>
     <div class="container">
         <main role="main" class="pb-3">
