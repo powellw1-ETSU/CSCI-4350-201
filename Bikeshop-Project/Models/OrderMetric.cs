@@ -9,7 +9,7 @@ namespace Bikeshop_Project.Models
     {
         public Decimal totalCost { get; set; }
 
-        public DateTime purchaseDate { get; set; }
+        public String purchaseDate { get; set; }
 
         public Decimal bicycleID { get; set; }
 
