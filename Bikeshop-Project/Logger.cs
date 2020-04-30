@@ -18,6 +18,7 @@ namespace Bikeshop_Project
         private static readonly string pageExtension = "pages";
         private static readonly string logsExtension = "logs";
         private static readonly string userExtension = "applicationusers";
+        private static readonly string orderExtension = "orders";
 
         private static Logs sessionLogs;
         private static DateTime loggedIn;
@@ -63,6 +64,18 @@ namespace Bikeshop_Project
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             await client.PostAsync(uri, content);
         }
+        
+        /// <summary>
+        /// Used to log information about a customer order
+        /// </summary>
+        /// <param name="orderInfo"></param>
+        public static async void logOrders(Orders orderInfo)
+        {
+            string uri = $"{baseUri}/{orderExtension}";
+            var json = JsonConvert.SerializeObject(orderInfo);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            await client.PostAsync(uri, content);
+        }
 
         #region General Session Logging
         /// <summary>
@@ -74,6 +87,7 @@ namespace Bikeshop_Project
         {
             // Create sessionLogs session
             sessionLogs = new Logs();
+            UserLoggedIn = true;
 
             // Assign private fields values
             loggedIn = timeLoggedIn;
@@ -91,17 +105,20 @@ namespace Bikeshop_Project
         /// <param name="timeLoggedOut">time user logged out of the application</param>
         public static void endLogsSession(DateTime timeLoggedOut)
         {
-            // Create timespan object to represent session duration
-            TimeSpan duration = timeLoggedOut - loggedIn;
+            if (UserLoggedIn)
+            {
+                // Create timespan object to represent session duration
+                TimeSpan duration = timeLoggedOut - loggedIn;
 
-            // set remaining info for logs for this session
-            sessionLogs.setTimeStamp(DateTime.Now.ToString());
-            sessionLogs.setTimeLoggedOut(timeLoggedOut.ToString());
-            sessionLogs.setNumberOfPageViews(numberofPageViews.ToString());
-            sessionLogs.setSessionDuration(duration.ToString());
-            sessionLogs.setPageTitle();
+                // set remaining info for logs for this session
+                sessionLogs.setTimeStamp(DateTime.Now.ToString());
+                sessionLogs.setTimeLoggedOut(timeLoggedOut.ToString());
+                sessionLogs.setNumberOfPageViews(numberofPageViews.ToString());
+                sessionLogs.setSessionDuration(duration.ToString());
+                sessionLogs.setPageTitle();
 
-            Logger.logLogs(sessionLogs); // Send log data to the monitoring team
+                Logger.logLogs(sessionLogs); // Send log data to the monitoring team
+            }
         }
         #endregion
 
