@@ -80,6 +80,7 @@ namespace Bikeshop_Project.Tests.Routes
         [InlineData("pages")]
         [InlineData("logs")]
         [InlineData("applicationusers")]
+        [InlineData("orders")]
         public async void GetRequests_MonitoringRoutes(string endpoint)
         {
             // Arrange

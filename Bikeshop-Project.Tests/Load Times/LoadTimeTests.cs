@@ -10,7 +10,7 @@ namespace Bikeshop_Project.Tests.Load_Times
     public class LoadTimeTests
     {
         private readonly HttpClient _client;
-        private readonly string baseUriDB = "bikeshopproject-prod.us-east-2.elasticbeanstalk.com";
+        private readonly string baseUriDB = "ec2-3-136-108-167.us-east-2.compute.amazonaws.com";
         private readonly int requiredMilliseconds = 2000;
 
         /// <summary>
