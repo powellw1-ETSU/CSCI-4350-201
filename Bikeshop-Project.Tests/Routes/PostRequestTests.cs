@@ -75,25 +75,5 @@ namespace Bikeshop_Project.Tests.Routes
             Assert.Equal(HttpStatusCode.Created, response.StatusCode);
 
         }
-
-        /// <summary>
-        /// This test ensures the Monitoring Team is properly accepting POST requests for Order Metrics
-        /// </summary>
-        [Fact]
-        public async void PostRequest_MonitoringTeam_Orders_Correct()
-        {
-            Orders test = new Orders(0, DateTime.Now, 0, 0);
-
-            string uri = $"http://{baseUriMonitoring}/{orderExtension}";
-            var json = JsonConvert.SerializeObject(test);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-            HttpResponseMessage response;
-
-            // Act
-            response = await _client.PostAsync(uri, content);
-
-            // Assert
-            Assert.Equal(HttpStatusCode.Created, response.StatusCode);
-        }
     }
 }
